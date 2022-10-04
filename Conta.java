@@ -1,4 +1,4 @@
-public class Conta {
+public abstract class Conta implements ITaxas{
 
     public static int contadorNumContas = 0;
     public int contadorNumOperacoes = 0;
@@ -13,6 +13,7 @@ public class Conta {
     public Operacao[] operacoes = new Operacao[1000];
 
     // ações
+    public abstract double calculaTaxas();
     public String toString(){
         String produtoConta = "Nome: "+this.nome+"Tipo: "+this.tipo+"cpf: "+this.cpf+"Saldo"+this.saldo+"Número da conta: "+this.numConta;
         return produtoConta;

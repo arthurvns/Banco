@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public abstract class Cliente {
+public abstract class Cliente implements ITaxas{
 
     private String nome;
     private String endereco;
@@ -13,6 +13,8 @@ public abstract class Cliente {
     }
 
     public abstract boolean autenticar(String chave);
+    public abstract double calculaTaxas();
+    public abstract void imprimirExtratoTaxas();
 
     public String getNome() {
         return nome;

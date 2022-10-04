@@ -6,7 +6,7 @@ public class Main {
         Cliente titanBr0202 = 
         new ClientePessoaFisica("Eduardo","Rua Mexico",20,"11111111",'m');
       
-      if(titanBr0202.autenticar("11111111")){
+      if(titanBr0202.autenticar("11111112")){
         System.out.println("Autenticação valida");
       }
       else{

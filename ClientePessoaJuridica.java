@@ -4,6 +4,7 @@ public class ClientePessoaJuridica extends Cliente {
     private int numFuncionarios;
     private String setor;
 
+    double taxa=0;
     ClientePessoaJuridica(String nome, String endereco, String cnpj, int numFuncionarios, String setor){
         super(nome, endereco);
         this.cnpj = cnpj;
@@ -18,6 +19,13 @@ public class ClientePessoaJuridica extends Cliente {
       else{
         return false;
       }
+    }
+    public double calculaTaxas(){
+        taxa += 20;
+        return taxa;
+    }
+    public void imprimirExtratoTaxas(){
+        System.out.println("Taxas"+taxa);
     }
 
     public String getCnpj() {

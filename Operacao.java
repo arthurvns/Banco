@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * Classe responsável por registrar operações de saque e depósitos realizados em contas correntes.
  */
-public abstract class Operacao {
+public abstract class Operacao implements ITaxas {
 
     /* Data de realização da operação */
     public Date data;
@@ -23,6 +23,8 @@ public abstract class Operacao {
     public char getTipo() {
         return tipo;
     }
+
+    public abstract double calculaTaxas();
 
     public void setTipo(char tipo) {
         if(tipo =='d'||tipo =='s'){

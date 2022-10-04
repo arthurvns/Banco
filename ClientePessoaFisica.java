@@ -2,7 +2,7 @@ public class ClientePessoaFisica extends Cliente{
     private int idade;
     private String cpf;
     private char sexo;
-
+    double taxa=0;
     ClientePessoaFisica(String nome, String endereco, int idade, String cpf, char sexo){
         super(nome, endereco);
         this.idade = idade;
@@ -17,6 +17,15 @@ public class ClientePessoaFisica extends Cliente{
       else{
         return false;
       }
+    }
+    public double calculaTaxas(){
+
+        taxa += 10;
+
+        return taxa;
+    }
+    public void imprimirExtratoTaxas(){
+        System.out.println("Taxas"+taxa);
     }
   
     public int getIdade() {
