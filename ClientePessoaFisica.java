@@ -64,5 +64,5 @@ public class ClientePessoaFisica extends Cliente{
             return false;
         }
     }
-lientePessoaFisica: A autenticação deverá comparar se a chave é igual ao CPF.
+
 }

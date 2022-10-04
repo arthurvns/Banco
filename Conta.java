@@ -41,7 +41,7 @@ public class Conta {
             return false;
         } else{
             this.saldo -=valor;
-            this.operacoes[contadorNumOperacoes] = new Operacao('s', valor);
+            this.operacoes[contadorNumOperacoes] = new OperacaoSaque('s', valor);
             contadorNumOperacoes++;
             return true;
         }
@@ -51,7 +51,7 @@ public class Conta {
         if(valor < 0){
             return  false;
         } else{
-            this.operacoes[contadorNumOperacoes] = new Operacao('d', valor);
+            this.operacoes[contadorNumOperacoes] = new OperacaoDeposito('d', valor);
             contadorNumOperacoes++;
             this.saldo += valor;
             return true;
@@ -74,8 +74,7 @@ public class Conta {
         }
 
     }
-liente(); //ISSO NÃO DEVERIA SER POSSÍVEL!
-Operacao op = new Operacao('s', 1000); // ISSO TAMBÉM NÃO!!
+
     public String getNome() {
         return nome;
     }
