@@ -48,9 +48,9 @@ public abstract class Conta implements ITaxas{
         }
     }
 
-    public boolean depositar(double valor){
+    public boolean depositar(double valor)throws ValorNegativoException{
         if(valor < 0){
-            return  false;
+            throw  new ValorNegativoException ("Valor negativo");
         } else{
             this.operacoes[contadorNumOperacoes] = new OperacaoDeposito('d', valor);
             contadorNumOperacoes++;
@@ -66,7 +66,7 @@ public abstract class Conta implements ITaxas{
 
 
     }
-    public boolean transferir(Conta destino, double valor) {
+    public boolean transferir(Conta destino, double valor)throws ValorNegativoException{
         if(this.sacar(valor)){
             destino.depositar(valor);
             return true;

@@ -17,7 +17,7 @@ public class ContaCorrente extends Conta{
       return true;
     }
     else{
-      return false;
+      throw new IlegalArgumentException();
     }
   }
 }
